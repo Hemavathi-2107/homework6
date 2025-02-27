@@ -1,0 +1,39 @@
+Output:
+
+(venv) hemarathinam@Hemavathi:~/homework5$ python3 main.py
+Registered command: add
+Registered command: subtract
+Registered command: multiply
+Registered command: divide
+Welcome to the Command Pattern Calculator!
+Type 'menu' to see the available commands.
+
+Enter command (or 'exit' to quit): menu
+Available commands: add, subtract, multiply, divide
+
+Enter command (or 'exit' to quit): add
+Enter the numbers separated by space for 'add': 4 7
+Result: 11
+
+Enter command (or 'exit' to quit): subtract
+Enter the numbers separated by space for 'subtract': 8 4
+Result: 4
+
+Enter command (or 'exit' to quit): multiply
+Enter the numbers separated by space for 'multiply': 7 5
+Result: 35
+
+Enter command (or 'exit' to quit): divide 
+Enter the numbers separated by space for 'divide': 9 4
+Result: 2.25
+
+Enter command (or 'exit' to quit): hee
+hee: Command not found. Type 'menu' to see available commands.
+
+Enter command (or 'exit' to quit): add 
+Enter the numbers separated by space for 'add': 6 e
+Error: Invalid input. Please enter numbers.
+
+Enter command (or 'exit' to quit): exit
+Exiting... Goodbye!
+
