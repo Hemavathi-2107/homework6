@@ -1,6 +1,15 @@
-from app.commands import command_handler
+from app import CommandHandler, AddCommand, SubtractCommand, MultiplyCommand, DivideCommand
 
 def main():
+    # Create a command handler instance
+    command_handler = CommandHandler()
+    
+    # Register commands
+    command_handler.Register_Command("add", AddCommand())
+    command_handler.Register_Command("subtract", SubtractCommand())
+    command_handler.Register_Command("multiply", MultiplyCommand())
+    command_handler.Register_Command("divide", DivideCommand())
+
     print("Welcome to the Command Pattern Calculator!")
     print("Type 'menu' to see the available commands.")
     
@@ -13,11 +22,12 @@ def main():
             break
         elif command_name == "menu":
             # Display all registered commands
-            print("Available commands:", ", ".join(command_handler.get_registered_commands()))
+            available_commands = command_handler.get_registered_commands()
+            print("Available commands:", ", ".join(available_commands))
         elif command_name in command_handler.get_registered_commands():
             try:
                 # Ask for numbers from the user
-                args = input("Enter the numbers separated by space: ").strip().split()
+                args = input(f"Enter the numbers separated by space for '{command_name}': ").strip().split()
                 # Execute the command with the provided arguments
                 result = command_handler.Execute_Command(command_name, *args)
                 if result is not None:

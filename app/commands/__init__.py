@@ -1,3 +1,4 @@
+
 from abc import ABC, abstractmethod
 
 class Command(ABC):
@@ -30,5 +31,4 @@ class CommandHandler:
         '''Returns a list of registered commands.'''
         return list(self.commands.keys())
 
-# Initialize the command handler
-command_handler = CommandHandler()
+
